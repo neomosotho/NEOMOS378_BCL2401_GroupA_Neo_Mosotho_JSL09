@@ -54,8 +54,7 @@ setInterval(getCurrentTime, 1000)
 navigator.geolocation.getCurrentPosition( async position => {
     try {
         // Fetch weather data using the latitude and longitude obtained from the user's position
-        const res = await fetch(`https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=$
-        {position.coords.latitude}&lon=${position.coords.longitude}&units=imperial`)
+        const res = await fetch(`https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=imperial`)
         if (!res.ok) {
             throw Error("Weather data not available")
         }
