@@ -64,7 +64,7 @@ navigator.geolocation.getCurrentPosition( async position => {
         // Update the inner HTML of the element with id "weather"
         document.getElementById("weather").innerHTML = ` 
             <img src=${iconUrl} />
-            <p class="weather-temp">${Math.round(data.main.temp)}</p>
+            <p class="weather-temp">${Math.round(data.main.temp)}°</p>
             <p class="weather-city">${data.name}</p> 
         `   
     } catch (err) {
